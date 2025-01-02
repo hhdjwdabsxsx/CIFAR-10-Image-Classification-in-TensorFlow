@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIFAR-10 Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <h1 style="font-size: 2rem; color: #333;">CIFAR-10 Image Classification</h1>
+        <p style="font-size: 1rem; color: #666; margin-bottom: 20px;">
+            Upload an image below to classify it into one of the CIFAR-10 categories.
+        </p>
+        <label for="file" style="display: block; font-size: 1rem; margin-bottom: 10px; color: #555;">Upload an Image:</label>
+        <input 
+            type="file" 
+            id="file" 
+            name="file" 
+            required 
+            style="margin-bottom: 20px; padding: 10px; border-radius: 5px; border: 1px solid #ccc; width: 100%; max-width: 300px;"
+        >
+        <button 
+            type="submit" 
+            style="
+                background-color: #4CAF50; 
+                color: white; 
+                padding: 10px 20px; 
+                border: none; 
+                border-radius: 5px; 
+                font-size: 1rem; 
+                cursor: pointer;
+            ">
+            Classify
+        </button>
+    </form>
+</body>
+</html>
+
